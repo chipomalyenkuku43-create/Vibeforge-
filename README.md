@@ -302,3 +302,15 @@ npm install
 # Final note
 echo "Setup complete. Run 'npm run dev' inside the project directory (it should already be the current dir)."
 echo "If Codespaces asks to forward port 3000, allow it to preview the app."
+# VibeForge Universal Mega-App  
+Created by **Chipo Malyenkuku (Chipomalyenkuku43-Create)**
+
+A cross-platform AI mega-engine supporting:
+- AI Music (Amapiano, Afrobeat, Rhumba, Jazz, Gospel, RnB, Hip-hop, Pop, Rock, Metal, Classical, Blues, Country)
+- AI Math (Primary → University → Research level)
+- AI Art & Animation
+- AI Story Creator
+- Marketplace & Fashion Engine
+- Android, iOS, Windows, Linux, and Web Support
+
+ORCID Publication: (Add link after you create it)
