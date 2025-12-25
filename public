@@ -1,6 +1,5 @@
-Vibeforge-/
-├─ public/
-│  ├─ index.html<!DOCTYPE html>
+public/
+ ├── index.html  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -80,11 +79,11 @@ Vibeforge-/
 </footer>
 
 </body>
-</html>
-│  ├─ demo.wav
-│  ├─ favicon.ico
-│  ├─ logo.png
-│  ├─ manifest.json{
+</html>     ← main landing page
+ ├── demo.wav         ← placeholder/demo audio
+ ├── favicon.ico
+ ├── logo.png
+ ├── manifest.json{
   "name": "VibeForge",
   "short_name": "VibeForge",
   "start_url": ".",
@@ -99,6 +98,5 @@ Vibeforge-/
     }
   ]
 }
-│  └─ robots.txtUser-agent: *
+ └── robots.txtUser-agent: *
 Allow: /
-└─ README.md
