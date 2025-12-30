@@ -1,102 +1,64 @@
-public/
- ├── index.html  <!DOCTYPE html>
+Vibeforge-/
+├── public/
+│   ├── index.html <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>VibeForge – African Music Creation Platform</title>
+  <title>VibeForge</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="favicon.ico" />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      text-align: center;
-    }
-    header {
-      padding: 40px 20px;
-    }
-    img {
-      width: 120px;
-      margin-bottom: 20px;
-    }
-    button {
-      padding: 14px 28px;
-      background: #ff9800;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      margin: 10px;
-    }
-    section {
-      max-width: 700px;
-      margin: auto;
-      padding: 20px;
-    }
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      font-size: 14px;
-      opacity: 0.8;
-    }
-  </style>
 </head>
-
 <body>
-
-<header>
-  <img src="logo.png" alt="VibeForge Logo">
-  <h1>VibeForge</h1>
-  <p>Create • Mix • Explore African & Global Music</p>
+  <h1>🎶 VibeForge</h1>
+  <p>Music • Art • Stories • AI • Education</p>
 
   <audio controls>
-    <source src="demo.wav" type="audio/wav">
-    Your browser does not support audio playback.
+    <source src="vibeforge_demo_main.wav" type="audio/wav" />
+    Your browser does not support audio.
   </audio>
 
-  <br><br>
-
-  <button onclick="window.location.href='https://vibeforge.vercel.app'">
-    Open Full App
-  </button>
-</header>
-
-<section>
-  <h2>What is VibeForge?</h2>
-  <p>
-    VibeForge is a next-generation music creation platform inspired by African
-    rhythms and global genres — Amapiano, Rhumba, Gospel Choral, Hip-Hop, Jazz,
-    Rock, R&B, Blues, Classical and more.
-  </p>
-</section>
-
-<footer>
-  © 2025 VibeForge • Built by Chipomalyenkuku43-Create
-</footer>
-
+  <p>Status: Live 🚀</p>
 </body>
-</html>     ← main landing page
- ├── demo.wav         ← placeholder/demo audio
- ├── favicon.ico
- ├── logo.png
- ├── manifest.json{
-  "name": "VibeForge",
-  "short_name": "VibeForge",
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#0f2027",
-  "theme_color": "#ff9800",
-  "icons": [
-    {
-      "src": "logo.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    }
-  ]
-}
- └── robots.txtUser-agent: *
-Allow: /
+</html>
+│   ├── favicon.ico
+│   ├── logo.png
+│   ├── vibeforge_demo_main.wav
+│   └── other assets
+├── README.md
+└── .github/
+    └── workflows/
+        └── main.ymlname: Deploy VibeForge
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload static files
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
