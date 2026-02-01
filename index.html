@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vibeforge — Demo</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;margin:32px;color:#0b1226}
+    header{margin-bottom:20px}
+    .card{border-radius:10px;padding:18px;margin:10px 0;background:#f6f8fb;box-shadow:0 4px 12px rgba(11,18,38,0.06)}
+    audio{width:100%;outline:none}
+    .note{color:#6b7280;font-size:0.95rem}
+    .btn{display:inline-block;padding:8px 12px;background:#0b5fff;color:#fff;border-radius:8px;text-decoration:none}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Vibeforge — Demo</h1>
+    <p class="note">This is a minimal static page added to the repository so you can run and preview the demo audio locally or via GitHub Pages.</p>
+  </header>
+
+  <section class="card">
+    <h2>Demo: vibeforge_demo_main.wav</h2>
+    <p class="note">Click Play to listen to the main demo track.</p>
+    <audio controls>
+      <source src="vibeforge_demo_main.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <section class="card">
+    <h2>Demo: vibeforge_demo_amapiano.wav</h2>
+    <p class="note">Amapiano demo track.</p>
+    <audio controls>
+      <source src="vibeforge_demo_amapiano.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <section class="card">
+    <h2>How to run locally</h2>
+    <ol>
+      <li>Clone the repo and checkout the branch: <code>git clone https://github.com/chipomalyenkuku43-create/Vibeforge-.git && cd Vibeforge- && git checkout fix/app-setup</code></li>
+      <li>Start a simple static file server (recommended):</li>
+      <ul>
+        <li>Python 3: <code>python -m http.server 8000</code></li>
+        <li>Node (serve): <code>npx serve .</code></li>
+      </ul>
+      <li>Open <code>http://localhost:8000</code> in your browser.</li>
+    </ol>
+    <p class="note">If you want this hosted on GitHub Pages, enable Pages in the repo settings and set the branch to <code>fix/app-setup</code> (or merge to <code>main</code> and use <code>main</code> branch for Pages).</p>
+  </section>
+
+  <footer style="margin-top:18px;color:#6b7280">
+    <p>Created automatically by GitHub Copilot Chat Assistant to make the repository runnable as a static demo.</p>
+  </footer>
+</body>
+</html>
