@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vibeforge — Demo</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; padding: 2rem; max-width: 900px; margin: auto; }
+    h1 { color: #0f172a; }
+    .card { border: 1px solid #e6e8eb; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; }
+    audio { width: 100%; margin-top: .5rem; }
+    footer { margin-top: 2rem; color: #6b7280; font-size: .9rem; }
+    .btn { display:inline-block; padding: .5rem 1rem; background:#0ea5e9; color:white; border-radius:6px; text-decoration:none }
+  </style>
+</head>
+<body>
+  <h1>Vibeforge — Demo</h1>
+  <p>A minimal demo site to play bundled audio examples from the repository.</p>
+
+  <div class="card">
+    <h2>Demo: Main</h2>
+    <p>Play the main demo track.</p>
+    <audio controls>
+      <source src="https://raw.githubusercontent.com/chipomalyenkuku43-create/Vibeforge-/main/vibeforge_demo_main.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <div class="card">
+    <h2>Demo: Amapiano</h2>
+    <p>Play the Amapiano demo track.</p>
+    <audio controls>
+      <source src="https://raw.githubusercontent.com/chipomalyenkuku43-create/Vibeforge-/main/vibeforge_demo_amapiano.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <div class="card">
+    <h2>Download Bundles</h2>
+    <p>The repository contains ZIP bundles; download them from the repo if you need project files or assets.</p>
+    <a class="btn" href="https://github.com/chipomalyenkuku43-create/Vibeforge-/tree/main">View repository</a>
+  </div>
+
+  <footer>
+    <p>Branch: fix/app-setup — This site is deployed via GitHub Actions to Pages.</p>
+  </footer>
+</body>
+</html>
