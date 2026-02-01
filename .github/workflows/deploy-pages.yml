@@ -1,31 +1,30 @@
 name: Deploy site to GitHub Pages
+
 on:
   push:
     branches:
+      - main
       - fix/app-setup
+
 permissions:
-  contents: read
   pages: write
   id-token: write
+
 jobs:
-  deploy:
+  upload-pages-artifact:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node (optional)
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v3
-
-      - name: Upload artifact
+      - name: Upload site folder
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./site
+          path: 'site'
 
+  deploy-pages:
+    needs: upload-pages-artifact
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
