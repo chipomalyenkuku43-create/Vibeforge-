@@ -1,48 +1,291 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Vibeforge — Demo</title>
-  <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; padding: 2rem; max-width: 900px; margin: auto; }
-    h1 { color: #0f172a; }
-    .card { border: 1px solid #e6e8eb; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; }
-    audio { width: 100%; margin-top: .5rem; }
-    footer { margin-top: 2rem; color: #6b7280; font-size: .9rem; }
-    .btn { display:inline-block; padding: .5rem 1rem; background:#0ea5e9; color:white; border-radius:6px; text-decoration:none }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibeforge - Creative Mega Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .intro {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .status {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .status .badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #333;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 0.5rem;
+        }
+
+        .status h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .audio-demo {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .audio-demo h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .audio-player {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        audio {
+            width: 100%;
+            margin: 0.5rem 0;
+        }
+
+        .coming-soon {
+            background: #e3f2fd;
+            padding: 1rem;
+            border-left: 4px solid #667eea;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+
+        .coming-soon strong {
+            color: #667eea;
+        }
+    </style>
 </head>
 <body>
-  <h1>Vibeforge — Demo</h1>
-  <p>A minimal demo site to play bundled audio examples from the repository.</p>
+    <header>
+        <h1>🎵 Vibeforge</h1>
+        <p>Your All-in-One Creative Mega Platform</p>
+    </header>
 
-  <div class="card">
-    <h2>Demo: Main</h2>
-    <p>Play the main demo track.</p>
-    <audio controls>
-      <source src="https://raw.githubusercontent.com/chipomalyenkuku43-create/Vibeforge-/main/vibeforge_demo_main.wav" type="audio/wav">
-      Your browser does not support the audio element.
-    </audio>
-  </div>
+    <div class="container">
+        <!-- Introduction -->
+        <div class="intro">
+            <h2>Welcome to Vibeforge</h2>
+            <p>Vibeforge is a multi-feature creative mega app designed to empower creators, students, and researchers across multiple disciplines.</p>
+            <p>Access <strong>music creation, digital art, storytelling, AI-powered mathematics, digital marketplace, and AI fashion generation</strong> all in one unified platform.</p>
+            <div class="coming-soon">
+                <strong>📦 Status:</strong> Source code coming soon. Platform currently in development phase.
+            </div>
+        </div>
 
-  <div class="card">
-    <h2>Demo: Amapiano</h2>
-    <p>Play the Amapiano demo track.</p>
-    <audio controls>
-      <source src="https://raw.githubusercontent.com/chipomalyenkuku43-create/Vibeforge-/main/vibeforge_demo_amapiano.wav" type="audio/wav">
-      Your browser does not support the audio element.
-    </audio>
-  </div>
+        <!-- Features Grid -->
+        <h2 style="text-align: center; color: white; margin: 2rem 0;">✨ Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">🎵</div>
+                <h3>Music Engine</h3>
+                <p>Beat generation and music creation in African & global genres including Amapiano, Rhumba, Gospel, Hip-Hop, Jazz, and more.</p>
+            </div>
 
-  <div class="card">
-    <h2>Download Bundles</h2>
-    <p>The repository contains ZIP bundles; download them from the repo if you need project files or assets.</p>
-    <a class="btn" href="https://github.com/chipomalyenkuku43-create/Vibeforge-/tree/main">View repository</a>
-  </div>
+            <div class="feature-card">
+                <div class="icon">🎨</div>
+                <h3>Art & Design</h3>
+                <p>Digital art creation tools and design canvas for visual creators. Explore and share your artwork.</p>
+            </div>
 
-  <footer>
-    <p>Branch: fix/app-setup — This site is deployed via GitHub Actions to Pages.</p>
-  </footer>
+            <div class="feature-card">
+                <div class="icon">📖</div>
+                <h3>Stories & Scripts</h3>
+                <p>Story writing and screenplay creation with multilingual African storytelling support. Perfect for writers and filmmakers.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🧮</div>
+                <h3>AI Mathematics</h3>
+                <p>AI-powered math problem solver with step-by-step explanations for secondary to university-level mathematics.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🛍️</div>
+                <h3>Digital Marketplace</h3>
+                <p>Buy and sell digital products and creative assets. Monetize your creations and support other creators.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">👗</div>
+                <h3>Fashion Generator</h3>
+                <p>AI-powered fashion design generator. Create unique fashion concepts and explore style galleries.</p>
+            </div>
+        </div>
+
+        <!-- Audio Demo -->
+        <div class="audio-demo">
+            <h3>🎧 Music Engine Demo</h3>
+            <p>Listen to sample tracks from Vibeforge's music engine:</p>
+            
+            <div class="audio-player">
+                <strong>Demo Track - Main</strong>
+                <audio controls>
+                    <source src="https://raw.githubusercontent.com/chipomalyenkuku43-create/Vibeforge-/main/vibeforge_demo_main.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="audio-player">
+                <strong>Demo Track - Amapiano</strong>
+                <audio controls>
+                    <source src="https://raw.githubusercontent.com/chipomalyenkuku43-create/Vibeforge-/main/vibeforge_demo_amapiano.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <!-- Status Section -->
+        <div class="status">
+            <h3>🚀 Project Status</h3>
+            <p>Vibeforge is under active development across multiple phases:</p>
+            <div>
+                <span class="badge">Phase 1: Foundation (In Progress)</span>
+                <span class="badge">Phase 2: Music Engine</span>
+                <span class="badge">Phase 3: Creative Tools</span>
+                <span class="badge">Phase 4: AI Features</span>
+                <span class="badge">Phase 5: Marketplace</span>
+                <span class="badge">Phase 6: Cross-Platform Release</span>
+            </div>
+            <div class="coming-soon" style="margin-top: 1rem;">
+                <strong>📝 Source Code:</strong> Full source code will be released soon. Stay tuned!
+            </div>
+        </div>
+
+        <!-- Platform Support -->
+        <div class="intro">
+            <h2>🌍 Available On</h2>
+            <p>Vibeforge is being built for:</p>
+            <ul style="text-align: left; display: inline-block;">
+                <li>✅ Web (Desktop & Mobile)</li>
+                <li>✅ Android</li>
+                <li>✅ iOS (via PWA)</li>
+            </ul>
+        </div>
+
+        <!-- Repository Link -->
+        <div class="status">
+            <h3>📚 Learn More</h3>
+            <p>Check out our repository for documentation, roadmap, and more information:</p>
+            <a href="https://github.com/chipomalyenkuku43-create/Vibeforge-" target="_blank" style="display: inline-block; background: #667eea; color: white; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; margin-top: 1rem; font-weight: bold;">Visit GitHub Repository</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Vibeforge. All rights reserved.</p>
+        <p>Created by <strong>Chipomalyenkuku43-Create</strong></p>
+        <p style="margin-top: 1rem; color: #ccc; font-size: 0.9rem;">Source code coming soon | License: MIT</p>
+    </footer>
 </body>
 </html>
