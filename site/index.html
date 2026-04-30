@@ -11,66 +11,77 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
         }
 
         header {
             background: rgba(0, 0, 0, 0.8);
             color: white;
-            padding: 2rem 0;
+            padding: 2rem 1rem;
             text-align: center;
+            width: 100%;
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 0.5rem;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: #ccc;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 1rem;
+            width: 100%;
         }
 
         .intro {
             background: white;
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 10px;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
         }
 
         .intro h2 {
             color: #667eea;
             margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
 
         .intro p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-bottom: 1rem;
             color: #555;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+            width: 100%;
         }
 
         .feature-card {
             background: white;
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
@@ -83,63 +94,75 @@
         }
 
         .feature-card .icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
         .feature-card h3 {
             color: #667eea;
             margin-bottom: 0.5rem;
+            font-size: 1.2rem;
         }
 
         .feature-card p {
             color: #666;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .status {
             background: white;
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 10px;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
+            width: 100%;
         }
 
         .status .badge {
             display: inline-block;
             background: #ffc107;
             color: #333;
-            padding: 0.5rem 1.5rem;
+            padding: 0.5rem 1rem;
             border-radius: 20px;
             font-weight: bold;
-            margin: 0.5rem;
+            margin: 0.5rem 0.25rem;
+            font-size: 0.85rem;
         }
 
         .status h3 {
             color: #667eea;
             margin-bottom: 1rem;
+            font-size: 1.3rem;
         }
 
         footer {
             background: rgba(0, 0, 0, 0.8);
             color: white;
             text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
         }
 
         .audio-demo {
             background: white;
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 10px;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
         }
 
         .audio-demo h3 {
             color: #667eea;
             margin-bottom: 1rem;
+            font-size: 1.2rem;
         }
 
         .audio-player {
@@ -165,6 +188,38 @@
         .coming-soon strong {
             color: #667eea;
         }
+
+        .section-title {
+            text-align: center;
+            color: white;
+            margin: 1.5rem 0;
+            font-size: 1.5rem;
+        }
+
+        a.btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        a.btn:hover {
+            background: #5568d3;
+        }
+
+        ul {
+            text-align: left;
+            display: inline-block;
+        }
+
+        ul li {
+            margin: 0.5rem 0;
+        }
     </style>
 </head>
 <body>
@@ -177,7 +232,7 @@
         <!-- Introduction -->
         <div class="intro">
             <h2>Welcome to Vibeforge</h2>
-            <p>Vibeforge is a multi-feature creative mega app designed to empower creators, students, and researchers across multiple disciplines.</p>
+            <p>Vibeforge is a multi-feature creative mega app designed to empower creators, students, and researchers.</p>
             <p>Access <strong>music creation, digital art, storytelling, AI-powered mathematics, digital marketplace, and AI fashion generation</strong> all in one unified platform.</p>
             <div class="coming-soon">
                 <strong>📦 Status:</strong> Source code coming soon. Platform currently in development phase.
@@ -185,55 +240,55 @@
         </div>
 
         <!-- Features Grid -->
-        <h2 style="text-align: center; color: white; margin: 2rem 0;">✨ Key Features</h2>
+        <h2 class="section-title">✨ Key Features</h2>
         <div class="features-grid">
             <div class="feature-card">
                 <div class="icon">🎵</div>
                 <h3>Music Engine</h3>
-                <p>Beat generation and music creation in African & global genres including Amapiano, Rhumba, Gospel, Hip-Hop, Jazz, and more.</p>
+                <p>Beat generation in Amapiano, Rhumba, Gospel, Hip-Hop, Jazz, and more.</p>
             </div>
 
             <div class="feature-card">
                 <div class="icon">🎨</div>
                 <h3>Art & Design</h3>
-                <p>Digital art creation tools and design canvas for visual creators. Explore and share your artwork.</p>
+                <p>Digital art creation tools and design canvas for visual creators.</p>
             </div>
 
             <div class="feature-card">
                 <div class="icon">📖</div>
                 <h3>Stories & Scripts</h3>
-                <p>Story writing and screenplay creation with multilingual African storytelling support. Perfect for writers and filmmakers.</p>
+                <p>Story writing and screenplay creation with multilingual support.</p>
             </div>
 
             <div class="feature-card">
                 <div class="icon">🧮</div>
                 <h3>AI Mathematics</h3>
-                <p>AI-powered math problem solver with step-by-step explanations for secondary to university-level mathematics.</p>
+                <p>AI-powered math problem solver with step-by-step explanations.</p>
             </div>
 
             <div class="feature-card">
                 <div class="icon">🛍️</div>
                 <h3>Digital Marketplace</h3>
-                <p>Buy and sell digital products and creative assets. Monetize your creations and support other creators.</p>
+                <p>Buy and sell digital products and creative assets.</p>
             </div>
 
             <div class="feature-card">
                 <div class="icon">👗</div>
                 <h3>Fashion Generator</h3>
-                <p>AI-powered fashion design generator. Create unique fashion concepts and explore style galleries.</p>
+                <p>AI-powered fashion design generator for unique concepts.</p>
             </div>
         </div>
 
         <!-- Audio Demo -->
         <div class="audio-demo">
             <h3>🎧 Music Engine Demo</h3>
-            <p>Listen to sample tracks from Vibeforge's music engine:</p>
+            <p>Listen to sample tracks:</p>
             
             <div class="audio-player">
                 <strong>Demo Track - Main</strong>
                 <audio controls>
                     <source src="https://raw.githubusercontent.com/chipomalyenkuku43-create/Vibeforge-/main/vibeforge_demo_main.wav" type="audio/wav">
-                    Your browser does not support the audio element.
+                    Your browser does not support audio.
                 </audio>
             </div>
 
@@ -241,7 +296,7 @@
                 <strong>Demo Track - Amapiano</strong>
                 <audio controls>
                     <source src="https://raw.githubusercontent.com/chipomalyenkuku43-create/Vibeforge-/main/vibeforge_demo_amapiano.wav" type="audio/wav">
-                    Your browser does not support the audio element.
+                    Your browser does not support audio.
                 </audio>
             </div>
         </div>
@@ -249,17 +304,17 @@
         <!-- Status Section -->
         <div class="status">
             <h3>🚀 Project Status</h3>
-            <p>Vibeforge is under active development across multiple phases:</p>
+            <p>Vibeforge is under active development:</p>
             <div>
-                <span class="badge">Phase 1: Foundation (In Progress)</span>
-                <span class="badge">Phase 2: Music Engine</span>
-                <span class="badge">Phase 3: Creative Tools</span>
-                <span class="badge">Phase 4: AI Features</span>
-                <span class="badge">Phase 5: Marketplace</span>
-                <span class="badge">Phase 6: Cross-Platform Release</span>
+                <span class="badge">Phase 1: Foundation</span>
+                <span class="badge">Phase 2: Music</span>
+                <span class="badge">Phase 3: Creative</span>
+                <span class="badge">Phase 4: AI</span>
+                <span class="badge">Phase 5: Market</span>
+                <span class="badge">Phase 6: Release</span>
             </div>
-            <div class="coming-soon" style="margin-top: 1rem;">
-                <strong>📝 Source Code:</strong> Full source code will be released soon. Stay tuned!
+            <div class="coming-soon">
+                <strong>📝 Source Code:</strong> Coming soon!
             </div>
         </div>
 
@@ -267,7 +322,7 @@
         <div class="intro">
             <h2>🌍 Available On</h2>
             <p>Vibeforge is being built for:</p>
-            <ul style="text-align: left; display: inline-block;">
+            <ul>
                 <li>✅ Web (Desktop & Mobile)</li>
                 <li>✅ Android</li>
                 <li>✅ iOS (via PWA)</li>
@@ -277,15 +332,15 @@
         <!-- Repository Link -->
         <div class="status">
             <h3>📚 Learn More</h3>
-            <p>Check out our repository for documentation, roadmap, and more information:</p>
-            <a href="https://github.com/chipomalyenkuku43-create/Vibeforge-" target="_blank" style="display: inline-block; background: #667eea; color: white; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; margin-top: 1rem; font-weight: bold;">Visit GitHub Repository</a>
+            <p>Check out our repository:</p>
+            <a href="https://github.com/chipomalyenkuku43-create/Vibeforge-" target="_blank" class="btn">Visit GitHub</a>
         </div>
     </div>
 
     <footer>
         <p>&copy; 2026 Vibeforge. All rights reserved.</p>
-        <p>Created by <strong>Chipomalyenkuku43-Create</strong></p>
-        <p style="margin-top: 1rem; color: #ccc; font-size: 0.9rem;">Source code coming soon | License: MIT</p>
+        <p>Created by Chipomalyenkuku43-Create</p>
+        <p>Source code coming soon | License: MIT</p>
     </footer>
 </body>
 </html>
