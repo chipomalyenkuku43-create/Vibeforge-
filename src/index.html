@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibeforge - Creative Mega Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🎵 Vibeforge</div>
+            <ul class="nav-links">
+                <li><a href="#music">Music</a></li>
+                <li><a href="#art">Art</a></li>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#math">AI Math</a></li>
+                <li><a href="#marketplace">Marketplace</a></li>
+                <li><a href="#fashion">Fashion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Welcome to Vibeforge</h1>
+            <p>Your all-in-one creative platform for music, art, storytelling, and more</p>
+            <button class="cta-btn" onclick="scrollToSection('music')">Get Started</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Music Section -->
+        <section id="music" class="feature-section">
+            <h2>🎵 Music Engine</h2>
+            <p>Create beats in African & global genres</p>
+            <div class="feature-content">
+                <div class="feature-card">
+                    <h3>Beat Generator</h3>
+                    <p>Generate beats in Amapiano, Rhumba, Gospel, Hip-Hop, Jazz, and more</p>
+                    <button onclick="openFeature('music')">Launch</button>
+                </div>
+                <div class="feature-card">
+                    <h3>Demo Playback</h3>
+                    <p>Listen to sample tracks</p>
+                    <audio controls>
+                        <source src="../vibeforge_demo_main.wav" type="audio/wav">
+                        Your browser does not support audio.
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- Art Section -->
+        <section id="art" class="feature-section">
+            <h2>🎨 Art & Design</h2>
+            <p>Create and explore digital art</p>
+            <div class="feature-content">
+                <div class="feature-card">
+                    <h3>Design Tools</h3>
+                    <p>Canvas-based digital art creation</p>
+                    <button onclick="openFeature('art')">Launch Canvas</button>
+                </div>
+                <div class="feature-card">
+                    <h3>Gallery</h3>
+                    <p>Browse community artwork</p>
+                    <button onclick="openFeature('gallery')">View Gallery</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stories Section -->
+        <section id="stories" class="feature-section">
+            <h2>📖 Stories & Scripts</h2>
+            <p>Write and share your creative stories</p>
+            <div class="feature-content">
+                <div class="feature-card">
+                    <h3>Story Editor</h3>
+                    <p>Write multilingual African stories</p>
+                    <button onclick="openFeature('stories')">Start Writing</button>
+                </div>
+                <div class="feature-card">
+                    <h3>Script Tools</h3>
+                    <p>Format and create screenplays</p>
+                    <button onclick="openFeature('scripts')">Open Scripts</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Math Section -->
+        <section id="math" class="feature-section">
+            <h2>🧮 AI Mathematics</h2>
+            <p>Solve problems with AI assistance</p>
+            <div class="feature-content">
+                <div class="feature-card">
+                    <h3>Math Solver</h3>
+                    <p>Secondary to university-level mathematics</p>
+                    <button onclick="openFeature('math')">Solve Problems</button>
+                </div>
+                <div class="feature-card">
+                    <h3>Research Assistant</h3>
+                    <p>Academic support and explanations</p>
+                    <button onclick="openFeature('research')">Get Help</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marketplace Section -->
+        <section id="marketplace" class="feature-section">
+            <h2>🛍️ Marketplace</h2>
+            <p>Buy and sell digital products</p>
+            <div class="feature-content">
+                <div class="feature-card">
+                    <h3>Browse Products</h3>
+                    <p>Discover creative digital assets</p>
+                    <button onclick="openFeature('marketplace')">Shop Now</button>
+                </div>
+                <div class="feature-card">
+                    <h3>Sell Your Work</h3>
+                    <p>Monetize your creations</p>
+                    <button onclick="openFeature('sell')">Start Selling</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fashion Generator Section -->
+        <section id="fashion" class="feature-section">
+            <h2>👗 Fashion Generator</h2>
+            <p>AI-powered fashion design</p>
+            <div class="feature-content">
+                <div class="feature-card">
+                    <h3>Design Generator</h3>
+                    <p>Generate unique fashion concepts</p>
+                    <button onclick="openFeature('fashion')">Generate Design</button>
+                </div>
+                <div class="feature-card">
+                    <h3>Style Gallery</h3>
+                    <p>Browse generated styles</p>
+                    <button onclick="openFeature('styles')">View Styles</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Vibeforge. All rights reserved.</p>
+        <p>Source code coming soon</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
